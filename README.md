@@ -11,7 +11,7 @@ that were used in the research reported on in the [paper](https://arxiv.org/abs/
 
 ## Cite
 
-To cite this software, please cite the [paper](change link) using its DOI and the software itself, using the following DOI.
+To cite this software, please cite the [paper](https://arxiv.org/abs/2111.07701) using its DOI and the software itself, using the following DOI.
 
 [![DOI](zenedo link)](zenedo link)
 
