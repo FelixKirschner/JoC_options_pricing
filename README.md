@@ -1,6 +1,6 @@
 [![INFORMS Journal on Computing Logo](https://INFORMSJoC.github.io/logos/INFORMS_Journal_on_Computing_Header.jpg)](https://pubsonline.informs.org/journal/ijoc)
 
-# Options Pricing
+# Bounds on options prices
 
 This archive is distributed in association with the [INFORMS Journal on
 Computing](https://pubsonline.informs.org/journal/ijoc) under the [MIT License](LICENSE).
@@ -28,14 +28,33 @@ Below is the BibTex for citing this version of the code.
 }  
 ```
 
+## Background 
+
+An option is a derivative security. There are many kinds of options. We consider European call options, which give the owner of the option the right, but no obligation to purchase a (basket of) stock(s) at a predetermined price, called the strike price, at a predetermined date in the future, called maturity. 
+
+
+For example, say Alice sells Bob an option on a stock X with strike 100 USD maturing in 2 months time. Two months later, if the current stock price P of X is greater than 100 USD, Bob will exercise the option, meaning Alice has to sell Bob a stock of X for 100 USD. In this case Bob makes a profit of *(P-100)* USD since he can sell the stock at the market for P USD but he only paid 100 USD. If the the date of maturity the price P of the stock is below 100 USD, Bob will not exercise the option since it is cheaper to buy the stock at the stock market. The payoff function for Bob hence is *max(0, x-K)* where *x* is the stock price at maturity and *K* is the strike price. Since Bob's payoff is nonnegative, the option must have a nonnegative value. The code presented here contributes to the question how much an option is worth, which has been studied extensively. 
+
 ## Description
 
-The code presented here was used to obtain the bounds on option prices given in the examples in the referenced paper. 
+Given observable option prices and their respective strikes on various assets {1, ... , n}, we present methods to obtain inner and outer bounds on the feasible range of prices for a European basket call option with given strike relying on the assets {1, ... ,n}. The weights of the basket can be chosen freely. This problem can be stated as a *Generalized Moment Problem (GMP)*; an optimization problem over the space of probability measures. The code we present ought to approximate the optimal solution, i.e., the optimal measure for the GMP, by a hierarchy of semidefinite programs, known as the Lasserre hierarchy. Under suitable assumptions we prove in our [paper](https://arxiv.org/abs/2111.07701), that the hierarchy converges, For a comprehensive treatment of the problem of pricing basket options relying on multiple assets and its mathematical formulation we refer to the [paper](https://arxiv.org/abs/2111.07701). The code presented here was used to obtain all bounds of the examples given in the paper. For the sake of completeness all results that appear in the paper may be found in [results](results).
 
 ## Language
 
-The code is written in the [Julia programming language](https://julialang.org).
+The code is written in the [Julia programming language](https://julialang.org). Please visit the website for an installation guide. 
+
+## Usage 
+
+To compute outer bounds of the price range of an European basket call option a given strike *K* and observable prices of European call options on the assets {1, ..., n} contained in the basket use the code in *hierarchy_outer_bounds.jl* in [src](src). 
+
+For simplicity, make sure for all assets the same number of observable options and prices are available. Define a matrix *strikes*, where row *i* contains the prices of the observable options corresponding to asset *i* in ascending order. Further, define a matrix *prices* where the entry *prices[i,j]* contains the price of the option on asset *i* with strike price given by *strikes[i,j]*. 
+
+We do not provide a closed form solution for *B*, but depending on *M*, which we chose to set to *200 000*, setting *B ~ sqrt(M)* worked well. Let *weights* be the vector of the weights of the basket. Finally, to solve level $r$ of the hierarchy for the given data, call the function *compBounds(K, B, M, level, silent, strikes, prices, weights)*, where silent is a boolean suppressing the solver output when set to true.
 
 ## Results
 
-The results that are produced by the code may be found in Tables 1-8 in the paper. 
+All results appearing in the paper are collected in [results](results). Information on how to reproduce the results may be found in the README file in the folder [results](results).
+
+## Data 
+
+All data that was used is available in [data](data). Some of the data points were created artificially and some were observed from publicly available data. All data sets are consistent, i.e., do not allow for arbitrage strategies. 
