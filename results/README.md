@@ -34,17 +34,33 @@ prices = [20 15.5 12 5.5 1; 20.5 15 10 6 0.75]
 
 weights = [1 / 2 1 / 2]
 
-We present the results as follows *(K, lower bound, upper bound)*
+We present the results in the following form *(K, lower bound, upper bound)*
 
-(90,16.875,20.25)
+(90, 16.875, 20.25)
 
-(95,12.792,15.7)
+(95, 12.792, 15.7)
 
-(100,8.708,11.55)
+(100, 8.708, 11.55)
 
-(105,4.625,8.016)
+(105, 4.625, 8.016)
 
-(110,1.675,4.75)
+(110, 1.675, 4.75)
 
-(115,0.0,2)
+(115, 0.0, 2)
 
+## Currency basket option
+
+strikes = [135.5 138.5; 116 119]
+
+prices = [2.77 1.17; 2.21 0.67]
+
+weights = [2 / 3 1 / 3]
+
+
+We present the results in the following form *(K, lower bound, upper bound)*
+
+(100, 1.4933, 31.5834)
+(105, 1.2599, 26.5833)
+(110, 1.0266, 21.5833)
+(115, 0.7933, 16.5833)
+(120, 0.56, 11.5833)
