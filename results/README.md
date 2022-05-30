@@ -114,6 +114,23 @@ We present the results in the following form *(K, upper bound, lower bound)*
 
 Here we give the result for the example using the inner range. We give results for the levels *r = 2,...,7* of the hierarchy.
 
-strikes = []
+strikes = [100, 110]
 
-prices = []
+prices = [8.375, 1.875]
+
+k = 105
+
+We present the results in the following form *(level, epsilon, upper bound, lower bound)*
+
+(2, 0.0273, 5.1279, 5.122)
+
+(3, 0.02525, 5.1366, 5.1136)
+
+(4, 0.022125, 5.1288, 5.1221)
+
+(5, 0.01755, 5.1264, 5.1251)
+
+(6, 0.0161, - ,  4.224)
+
+(7, 0.0161, - , 3.3522)
+
