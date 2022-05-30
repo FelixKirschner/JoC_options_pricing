@@ -57,6 +57,7 @@ weights = [1]
 ## Strike and prices of tech stock call options 
 
 #AAPL
+
 strikes = [120 130 145 160 170]
 
 prices = [45.2 35.7 21.75 9.1 3.35]
@@ -64,6 +65,7 @@ prices = [45.2 35.7 21.75 9.1 3.35]
 weights = [1]
 
 #FB
+
 strikes = [155 170 180 190 200 210]
 
 prices = [52.7 38.5 29.85 22 14.75 9.15]
@@ -71,6 +73,7 @@ prices = [52.7 38.5 29.85 22 14.75 9.15]
 weights = [1]
 
 #NVDA
+
 strikes = [175 180 190 195 227.5]
 
 prices = [57.9 53.2 43.85 39.35 10.75]
@@ -88,6 +91,7 @@ weights = [1]
 ## Data from Table 6 in paper to produce Table 7
 
 #AAPL, FB, NVDA, QCOM
+
 strikes = [120 130 145 160 170;
     155 170 180 190 200;
     175 180 190 195 227.5;
