@@ -32,7 +32,7 @@ Below is the BibTex for citing this version of the code.
 
 The code presented here was used to obtain the bounds on option prices given in the examples in the referenced paper. 
 
-## Building
+## Language
 
 The code is written in the [Julia programming language](https://julialang.org).
 
