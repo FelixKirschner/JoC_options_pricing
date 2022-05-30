@@ -52,12 +52,10 @@ weights = [2 / 3 1 / 3]
 ## Example Bertsimas Popescu (data from Table 1 in paper)
 
 strikes = [95 100 110 115 120]
+
 prices = [12.875 8.375 1.875 0.625 0.25]
+
 weights = [1]
-checkConsistency(strikes, prices)
-
-
-
 
 ## Strike and prices of tech stock call options 
 
