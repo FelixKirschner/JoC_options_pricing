@@ -6,7 +6,7 @@ This archive is distributed in association with the [INFORMS Journal on
 Computing](https://pubsonline.informs.org/journal/ijoc) under the [MIT License](LICENSE).
 
 The software and data in this repository are a snapshot of the software and data
-that were used in the research reported on in the [paper] (change link) by Didier Henrion, Felix Kirschner, Etienne de Klerk, Milan Korda, Jean-Bernard Lasserre and Victor Magron.
+that were used in the research reported on in the [paper](https://arxiv.org/abs/2111.07701) by Didier Henrion, Felix Kirschner, Etienne de Klerk, Milan Korda, Jean-Bernard Lasserre and Victor Magron.
 
 
 ## Cite
@@ -30,45 +30,12 @@ Below is the BibTex for citing this version of the code.
 
 ## Description
 
-The code presented here was used to obtain the bounds on option prices given in the referenced paper. 
+The code presented here was used to obtain the bounds on option prices given in the examples in the referenced paper. 
 
 ## Building
 
 The code is written in the [Julia programming language](https://julialang.org).
 
-Be sure to make clean before building a different version of the code.
-
 ## Results
 
 The results that are produced by the code may be found in Tables 1-8 in the paper. 
-
-## Replicating
-
-To replicate the results in [Figure 1](results/mult-test), do either
-
-```
-make mult-test
-```
-or
-```
-python test.py mult
-```
-To replicate the results in [Figure 2](results/sum-test), do either
-
-```
-make sum-test
-```
-or
-```
-python test.py sum
-```
-
-## Ongoing Development
-
-This code is being developed on an on-going basis at the author's
-[Github site](https://github.com/tkralphs/JoCTemplate).
-
-## Support
-
-For support in using this software, submit an
-[issue](https://github.com/tkralphs/JoCTemplate/issues/new).
