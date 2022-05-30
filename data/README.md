@@ -3,9 +3,6 @@
 Here is the data needed for replicating the experiments. 
 
 
-## Example strikes and prices
-
-
 ## Artificial example 1 ("Explicit example with two assets" in paper)
 
 strikes = [100 110; 102 107]
